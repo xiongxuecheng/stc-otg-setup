@@ -190,4 +190,4 @@ For an example test case, refer to the OSPFv2 conformance test case in the OTG C
 **Note:** When using STC OTG Service, ensure that gRPC transport is enabled (otg_grpc_transport = True) and that the OTG host and port configurations are set correctly.
 
 ## Supported OTG APIs and GNMI Path List
-Refer to `SupportedAPIsList.txt` for the latest supported OTG APIs and GNMI paths.
+Refer to `SupportedAPIsList.json` for the latest supported OTG APIs and GNMI paths.
