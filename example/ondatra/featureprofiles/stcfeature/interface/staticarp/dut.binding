@@ -1,0 +1,76 @@
+# proto-file: github.com/openconfig/featureprofiles/blob/main/topologies/proto/binding.proto
+# proto-message: openconfig.testing.Binding
+
+# This is an example static binding that demonstrates how to specify
+# options to be used in conjunction with the atedut_*.testbed
+# testbeds.
+
+# These options are inherited throughout the entire binding for both the
+# DUT and the ATE, unless overridden by a specific device or protocol.
+options {
+  username: "admin"
+  password: "spirent123"
+}
+
+duts {
+  id: "dut"
+  name: "10.126.37.109"  # Change this to the device hostname.
+  vendor: 1  # 1 "ARISTA"
+ 
+  # Options inherited by all protocols on this device unless
+  # overridden by individual protocols.  Remove if not needed.
+  options {
+    insecure: true
+  }
+ 
+  # Options specific to gNMI.  Remove if not needed.
+  gnmi {
+    target: "10.126.37.109:6030"
+  }
+ 
+  # Options specific to gNOI
+  gnoi {
+    target: "10.126.37.109:6030"
+    max_recv_msg_size: 40000000
+  }
+ 
+  # Before this binding can be used with a topology, add ports mapping
+  # from its topology ID to the actual port name on the device.
+  ports {
+    id: "port1"
+    name: "Ethernet1"  # Change this to the actual port name.
+  }
+  ports {
+    id: "port2"
+    name: "Ethernet2"  # Change this to the actual port name.
+  }
+}
+
+ates {
+  id: "ate"
+  name: "labserver"  # Change this to the labserver hostname.
+
+  # This option specific to OTG. 
+  otg {
+    target: "10.126.37.139:50051" # Change this to the otg server endpoint.
+    insecure: true
+    timeout: 600
+  }
+
+  gnmi {
+     target: "10.126.37.139:50052"  # Change this to the gnmi server endpoint.
+     insecure: true
+     timeout: 600
+  }
+
+  # Before this binding can be used with a topology, add ports mapping
+  # from its topology ID to the actual port name on the device.
+  ports {
+    id: "port1"
+    name: "//10.126.37.111/1/1"  # Change this to the port location.
+  }
+  ports {
+    id: "port2"
+    name: "//10.126.37.111/1/2"  # Change this to the port location.
+  }
+}

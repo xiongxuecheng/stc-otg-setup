@@ -1,0 +1,13 @@
+otg_host:
+  localhost:50051 
+otg_ports:
+  - //10.61.37.186/1/1 
+  - //10.61.37.186/1/2
+otg_speed:
+  speed_1_gbps
+otg_iterations:
+  100
+otg_capture_check:
+  false
+otg_grpc_transport:
+  true

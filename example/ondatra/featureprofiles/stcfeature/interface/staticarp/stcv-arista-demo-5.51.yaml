@@ -1,0 +1,16 @@
+name: stcv-ceos-stcv-lab
+
+topology:
+  nodes:
+    ceos:
+      kind: ceos
+      image: ceos-lab-4.35.0f
+      startup-config: ./startup-config
+
+    stcv1:
+      kind: linux
+      image: stc:5.51.2946
+  links:
+    - endpoints: ["ceos:eth1", "stcv1:eth1"]
+    - endpoints: ["ceos:eth2", "stcv1:eth2"]
+
