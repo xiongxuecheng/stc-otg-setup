@@ -10,7 +10,7 @@ CONTAINER_ID=$(cat /proc/self/cgroup | grep 'memory' | awk -F'/' '{print $3}' | 
 echo "Container ID: $CONTAINER_ID"
 
 # Construct the command with the expanded LABSERVER variable
-CMD="/opt/ondatraOTG/otgservice.V1.*.sh --target otgservice"
+CMD="/opt/ondatraOTG/otgservice*.sh --target otgservice"
 
 # Run the constructed command
 echo "Running otgservice script with command: $CMD"
