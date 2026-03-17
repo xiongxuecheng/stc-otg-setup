@@ -9,7 +9,7 @@
 # DUT and the ATE, unless overridden by a specific device or protocol.
 options {
   username: "admin"
-  password: "spirent123"
+  password: "viavi123"
 }
 
 duts {

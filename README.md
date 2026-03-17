@@ -1,22 +1,22 @@
-# Spirent TestCenter OTG API Support Overview
+# Viavi TestCenter OTG API Support Overview
 
-Spirent TestCenter (STC) is a powerful, high-performance testing platform designed to validate and optimize network infrastructure, protocols, and applications. To enhance automation and integration capabilities, STC supports the OTG (Open Traffic Generator) and gNMI (gRPC Network Management Interface) APIs, enabling users to leverage open-source, standardized test scripts in flexible and scalable open-source test environments.
+Viavi TestCenter (STC) is a powerful, high-performance testing platform designed to validate and optimize network infrastructure, protocols, and applications. To enhance automation and integration capabilities, STC supports the OTG (Open Traffic Generator) and gNMI (gRPC Network Management Interface) APIs, enabling users to leverage open-source, standardized test scripts in flexible and scalable open-source test environments.
 
-## Key Benefits of Spirent TestCenter’s OTG API Support
+## Key Benefits of Viavi TestCenter’s OTG API Support
 
-With Spirent TestCenter’s OTG API support, users can:
+With Viavi TestCenter’s OTG API support, users can:
 
-- Deploy Spirent TestCenter with ease in Ondatra, snappi, and gosnappi test environments
-- Control any version of Spirent TestCenter, including appliances, chassis-based hardware, and virtual solutions
+- Deploy Viavi TestCenter with ease in Ondatra, snappi, and gosnappi test environments
+- Control any version of Viavi TestCenter, including appliances, chassis-based hardware, and virtual solutions
 - Automate and streamline network traffic and protocols testing with open-source tools
 - Leverage a vendor-agnostic approach for multi-platform interoperability
-- Easily integrate Spirent TestCenter into existing DevOps and CI/CD environments
+- Easily integrate Viavi TestCenter into existing DevOps and CI/CD environments
 
 To help users set up and configure STC with OTG API, this repository includes comprehensive setup instructions, sample scripts, and best practices for seamless implementation.
 
-## Spirent OTG Service Deployment Guide
+## Viavi OTG Service Deployment Guide
 
-The Spirent OTG Service is available for use on Linux PC/workstations and depends on the installation of the Spirent ReST API application. You can pre-install either the Spirent TestCenter application or Spirent Labserver as the ReST API application.
+The Viavi OTG Service is available for use on Linux PC/workstations and depends on the installation of the Viavi ReST API application. You can pre-install either the Viavi TestCenter application or Viavi Labserver as the ReST API application.
 
 ### Recommended System Requirements
 
@@ -25,7 +25,7 @@ The Spirent OTG Service is available for use on Linux PC/workstations and depend
 - **Disk:** 30 GB (SSD or better)
 - **STC Version:** 5.52 or later
 - The OTG Service can be installed on the same machine as the ReST API application.If installing on the same host, refer to the system resource requirements for STC or STC LabServer.
-- If using Spirent AION Licensing, refer to the [Spirent TestCenter with Spirent AION Licensing Quick Start Guide (DOC12187)] for further details.
+- If using Viavi AION Licensing, refer to the [Viavi TestCenter with Viavi AION Licensing Quick Start Guide (DOC12187)] for further details.
 
 ## Deploying OTG Service Directly
 
@@ -115,7 +115,7 @@ Required files:
 - `Dockerfile`: Dockerfile to build OTG services
 - `entrypoint.sh`: Shell script used to start OTG services (GNMI and OTG)
 - `otg-multi-compose.yaml`: Docker Compose file to start multiple instances of OTG services
-- `otgservice.V[x.xx]`: Spirent OTG Service application
+- `otgservice.V[x.xx]`: Viavi OTG Service application
 
 #### Step 2: Load the Labserver Docker Image
 

@@ -27,6 +27,6 @@ services:
     ports: ["50051:50051","50052:50052"]
     tty: true
     volumes:
-      - /home/spirent/demo/testdata/:/share
+      - /home/viavi/demo/testdata/:/share
 
     command: "tail -f /dev/null"
